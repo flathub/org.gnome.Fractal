@@ -14,6 +14,7 @@
         "--talk-name=org.freedesktop.Notifications"
     ],
     "build-options" : {
+        "append-path": "/usr/lib/sdk/rust-stable/bin",
         "env": {
             "CARGO_HOME": "/run/build/Fractal/cargo"
         }
@@ -21,10 +22,7 @@
     "modules": [
         {
            "name": "Fractal",
-           "buildsystem": "simple",
-           "build-commands": [
-               "source /usr/lib/sdk/rust-stable/enable.sh && ./configure --prefix=/app && make && make install"
-            ],
+           "buildsystem": "meson",
            "sources": [
                {
                    "type": "archive",
