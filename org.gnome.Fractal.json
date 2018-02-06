@@ -26,8 +26,8 @@
            "sources": [
                {
                    "type": "archive",
-                   "url": "https://gitlab.gnome.org/danigm/fractal/uploads/36451b5e1a1a827df54519ee8cf034f2/fractal-0.1.10.tar.xz",
-                   "sha256": "7ba614dc354724f7c2ffec98fcd348c7ed1ae898add281b51036aac0b9199df1"
+                   "url": "https://gitlab.gnome.org/danigm/fractal/uploads/0e72c8c4f899f96948ae53fe42a6bbea/fractal-0.1.11.tar.xz",
+                   "sha256": "e04b90ab778bc8d96699848856f159adc0e3358b992dfe0de595e40778fd5583"
                }
            ]
         }
