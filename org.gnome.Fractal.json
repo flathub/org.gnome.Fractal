@@ -11,7 +11,8 @@
         "--socket=x11",
         "--socket=wayland",
         "--talk-name=org.freedesktop.secrets",
-        "--talk-name=org.freedesktop.Notifications"
+        "--talk-name=org.freedesktop.Notifications",
+        "--filesystem=home"
     ],
     "build-options" : {
         "append-path": "/usr/lib/sdk/rust-stable/bin",
@@ -26,8 +27,8 @@
            "sources": [
                {
                    "type": "archive",
-                   "url": "https://gitlab.gnome.org/danigm/fractal/uploads/90cdc8420cc8ffe9c89bc687d97e6409/fractal-0.1.12.tar.xz",
-                   "sha256": "3cf1d1be69653db30aa97d275fe20f3cd74a125aeae4dd88eea2f8fe030b927b"
+                   "url": "https://gitlab.gnome.org/danigm/fractal/uploads/f1b32ac33bf39cdbd9aed4fee8541b7d/fractal-0.1.13.tar.xz",
+                   "sha256": "b596c3f10568b2f0c7e8d90dbb3a55eb281a9c9043d0a47815c9080b78b2f9b1"
                }
            ]
         }
