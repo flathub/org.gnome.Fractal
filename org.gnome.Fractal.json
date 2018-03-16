@@ -1,7 +1,7 @@
 {
     "app-id": "org.gnome.Fractal",
     "runtime": "org.gnome.Platform",
-    "runtime-version": "3.26",
+    "runtime-version": "3.28",
     "sdk": "org.gnome.Sdk",
     "sdk-extensions": ["org.freedesktop.Sdk.Extension.rust-stable"],
     "command": "fractal",
@@ -27,8 +27,8 @@
            "sources": [
                {
                    "type": "archive",
-                   "url": "https://gitlab.gnome.org/danigm/fractal/uploads/ee557c7df30bb0021eea207ddddcc962/fractal-0.1.18.tar.xz",
-                   "sha256": "c3c67fffeda9336f862b4232a6f154a26dcb9e451b95f047a493a37d6781ef8b"
+                   "url": "https://gitlab.gnome.org/danigm/fractal/uploads/a2085e9c9c97d42918cecf570ed24038/fractal-0.1.19.tar.xz",
+                   "sha256": "353b2607ccda09c2971885fb09bf159581b54bc4f92e5e28f6739a4b7fc42884"
                }
            ]
         }
