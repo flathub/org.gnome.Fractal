@@ -26,13 +26,33 @@
     },
     "modules": [
         {
+            "name": "enchant",
+            "cleanup": [ "/include", "/lib/pkgconfig", "*.la", "/share" ],
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "https://github.com/AbiWord/enchant/releases/download/v2.2.3/enchant-2.2.3.tar.gz",
+                    "sha256": "abd8e915675cff54c0d4da5029d95c528362266557c61c7149d53fa069b8076d"
+                }
+            ]
+        },
+        {
+            "name": "gspell",
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "https://git.gnome.org/browse/gspell"
+                }
+            ]
+        },
+        {
            "name": "Fractal",
            "buildsystem": "meson",
            "sources": [
                {
                    "type": "archive",
-                   "url": "https://gitlab.gnome.org/World/fractal/uploads/0572251be4a4de06812ac7571131ed57/fractal-0.1.29.tar.xz",
-                   "sha256": "aa0711080254ed08b79f28c21b0e609955065094ca412ef32f92c61182d67f9b"
+                   "url": "https://cloud.gnome.org/index.php/s/a3G4d75P5WG6AXn/download",
+                   "sha256": "1d0cc6d0efcbebf1d9e7cdaf3f163c2d81b870649811153b43732b167f91f455"
                }
            ]
         }
