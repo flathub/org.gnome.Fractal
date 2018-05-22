@@ -51,8 +51,8 @@
            "sources": [
                {
                    "type": "archive",
-                   "url": "https://wadobo.com/static/~danigm/fractal/fractal-0.1.30.tar.xz",
-                   "sha256": "1d0cc6d0efcbebf1d9e7cdaf3f163c2d81b870649811153b43732b167f91f455"
+                   "url": "https://gitlab.gnome.org/World/fractal/uploads/307ea6fe16f617750490a359b727aebb/fractal-0.1.30.tar.xz",
+                   "sha256": "db6d3edff7413b50980ef85e5b6fbb20e9081dc9f02575b4a9cbff0f5d2c6cc5"
                }
            ]
         }
