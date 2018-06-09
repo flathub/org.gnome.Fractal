@@ -41,7 +41,8 @@
             "sources": [
                 {
                     "type": "git",
-                    "url": "https://git.gnome.org/browse/gspell"
+                    "tag": "1.8.0",
+                    "url": "https://gitlab.gnome.org/GNOME/gspell.git"
                 }
             ]
         },
@@ -51,8 +52,8 @@
            "sources": [
                {
                    "type": "archive",
-                   "url": "https://gitlab.gnome.org/World/fractal/uploads/307ea6fe16f617750490a359b727aebb/fractal-0.1.30.tar.xz",
-                   "sha256": "db6d3edff7413b50980ef85e5b6fbb20e9081dc9f02575b4a9cbff0f5d2c6cc5"
+                   "url": "https://gitlab.gnome.org/World/fractal/uploads/5260e25e9d939b645d00289eea7d5f70/fractal-3.29.0.tar.xz",
+                   "sha256": "dec09234fed4a380908e2ecc94cab6703184cca73e39881fb272d1434183c6bd"
                }
            ]
         }
