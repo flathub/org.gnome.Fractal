@@ -52,8 +52,8 @@
            "sources": [
                {
                    "type": "archive",
-                   "url": "https://gitlab.gnome.org/World/fractal/uploads/5260e25e9d939b645d00289eea7d5f70/fractal-3.29.0.tar.xz",
-                   "sha256": "dec09234fed4a380908e2ecc94cab6703184cca73e39881fb272d1434183c6bd"
+                   "url": "https://gitlab.gnome.org/World/fractal/uploads/70d01654b73092dc6782666ef9440123/fractal-3.29.1.tar.xz",
+                   "sha256": "51bc394510b361d14823f446574e94a8cb4efa199ef253194cdd6e41395c5113"
                }
            ]
         }
