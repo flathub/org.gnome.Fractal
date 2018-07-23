@@ -14,6 +14,7 @@
         "--share=ipc",
         "--socket=x11",
         "--socket=wayland",
+        "--socket=pulseaudio",
         "--talk-name=org.freedesktop.secrets",
         "--talk-name=org.freedesktop.Notifications",
         "--filesystem=home"
@@ -47,13 +48,23 @@
             ]
         },
         {
+            "name" : "gtksourceview",
+            "sources" : [
+                {
+                    "type" : "git",
+                    "url" : "https://gitlab.gnome.org/GNOME/gtksourceview.git",
+                    "branch" : "gnome-3-24"
+                }
+            ]
+        },
+        {
            "name": "Fractal",
            "buildsystem": "meson",
            "sources": [
                {
                    "type": "archive",
-                   "url": "https://gitlab.gnome.org/World/fractal/uploads/70d01654b73092dc6782666ef9440123/fractal-3.29.1.tar.xz",
-                   "sha256": "51bc394510b361d14823f446574e94a8cb4efa199ef253194cdd6e41395c5113"
+                   "url": "//gitlab.gnome.org/World/fractal/uploads/270493b7e17ef0708f0405b393c0c903/fractal-3.29.4.tar.xz",
+                   "sha256": "a2d01ce7c059d8400d41ae607700151cf05980b8fd7e867e78ff2ae76bbe6028"
                }
            ]
         }
