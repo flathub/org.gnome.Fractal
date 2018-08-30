@@ -60,6 +60,9 @@
         {
            "name": "Fractal",
            "buildsystem": "meson",
+            "config-opts" : [
+                "-Dprofile=release"
+            ],
            "sources": [
                {
                    "type": "archive",
