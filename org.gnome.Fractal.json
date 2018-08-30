@@ -61,13 +61,13 @@
            "name": "Fractal",
            "buildsystem": "meson",
             "config-opts" : [
-                "-Dprofile=release"
+                "-Dprofile=default"
             ],
            "sources": [
                {
                    "type": "archive",
-                   "url": "https://gitlab.gnome.org/World/fractal/uploads/69d2f9a0b6fd2d31a0a2ad5ebb028c03/fractal-3.29.92.tar.xz",
-                   "sha256": "fe35a7c58b9a7238ba0b87ca451912d1adeefd73a9b51932f542677d14fbc952"
+                   "url": "https://gitlab.gnome.org/World/fractal/uploads/72d810016e9e90c5e04379a0ddd9e021/fractal-3.29.92.tar.xz",
+                   "sha256": "d1db7774f355cecf4282892a7f19c25e0f56c9a65e54be1be24b70dc4c8ed0b7"
                }
            ]
         }
