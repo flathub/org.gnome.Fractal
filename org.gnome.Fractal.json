@@ -1,7 +1,7 @@
 {
     "app-id": "org.gnome.Fractal",
     "runtime": "org.gnome.Platform",
-    "runtime-version": "3.28",
+    "runtime-version": "3.30",
     "sdk": "org.gnome.Sdk",
     "sdk-extensions": ["org.freedesktop.Sdk.Extension.rust-stable"],
     "command": "fractal",
@@ -27,28 +27,29 @@
     },
     "modules": [
         {
-            "name": "enchant",
-            "cleanup": [ "/include", "/lib/pkgconfig", "*.la", "/share" ],
-            "sources": [
+            "name" : "libhandy",
+            "buildsystem" : "meson",
+            "config-opts" : [
+                "-Dprofiling=false",
+                "-Dintrospection=true",
+                "-Dgtk_doc=false",
+                "-Dtests=false",
+                "-Dexamples=false",
+                "-Dvapi=false",
+                "-Dglade_catalog=false"
+            ],
+            "sources" : [
                 {
-                    "type": "archive",
-                    "url": "https://github.com/AbiWord/enchant/releases/download/v2.2.3/enchant-2.2.3.tar.gz",
-                    "sha256": "abd8e915675cff54c0d4da5029d95c528362266557c61c7149d53fa069b8076d"
-                }
-            ]
-        },
-        {
-            "name": "gspell",
-            "sources": [
-                {
-                    "type": "git",
-                    "tag": "1.8.0",
-                    "url": "https://gitlab.gnome.org/GNOME/gspell.git"
+                    "type" : "git",
+                    "url" : "https://source.puri.sm/Librem5/libhandy"
                 }
             ]
         },
         {
             "name" : "gtksourceview",
+            "config-opts" : [
+                "--disable-Werror"
+            ],
             "sources" : [
                 {
                     "type" : "git",
@@ -66,8 +67,8 @@
            "sources": [
                {
                    "type": "archive",
-                   "url": "https://gitlab.gnome.org/World/fractal/uploads/cc46d6b9702ce5d0b1f3073f516a58c3/fractal-3.30.0.tar.xz",
-                   "sha256": "4782a0ab59c5da2470a380700374d5c3d736085a66cf0de1fca9b2921c1f8363"
+                   "url": "https://gitlab.gnome.org/GNOME/fractal/uploads/ad6a483327c3e9ef5bb926b89fb26e2b/fractal-4.0.0.tar.xz",
+                   "sha256": "10b1ae500f46485d9b8959ab81a40e62109ab2ea48126b2cca2390479bf318a0"
                }
            ]
         }
