@@ -22,6 +22,14 @@
     "build-options" : {
         "append-path": "/usr/lib/sdk/rust-stable/bin"
     },
+    "cleanup": [
+        "/include",
+        "/lib/pkgconfig",
+        "/lib/*.la",
+        "/lib/girepository-1.0",
+        "/share/gir-1.0",
+        "/share/vala"
+    ],
     "modules": [
         {
             "name" : "libhandy",
