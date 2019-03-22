@@ -1,7 +1,7 @@
 {
     "app-id": "org.gnome.Fractal",
     "runtime": "org.gnome.Platform",
-    "runtime-version": "3.30",
+    "runtime-version": "3.32",
     "sdk": "org.gnome.Sdk",
     "sdk-extensions": ["org.freedesktop.Sdk.Extension.rust-stable"],
     "command": "fractal",
@@ -20,28 +20,34 @@
         "--filesystem=home"
     ],
     "build-options" : {
-        "append-path": "/usr/lib/sdk/rust-stable/bin",
-        "env": {
-            "CARGO_HOME": "/run/build/Fractal/cargo"
-        }
+        "append-path": "/usr/lib/sdk/rust-stable/bin"
     },
+    "cleanup": [
+        "/include",
+        "/lib/pkgconfig",
+        "/lib/*.la",
+        "/lib/girepository-1.0",
+        "/share/gir-1.0",
+        "/share/vala"
+    ],
     "modules": [
         {
             "name" : "libhandy",
             "buildsystem" : "meson",
             "config-opts" : [
                 "-Dprofiling=false",
-                "-Dintrospection=true",
+                "-Dintrospection=enabled",
                 "-Dgtk_doc=false",
                 "-Dtests=false",
                 "-Dexamples=false",
                 "-Dvapi=false",
-                "-Dglade_catalog=false"
+                "-Dglade_catalog=disabled"
             ],
             "sources" : [
                 {
                     "type" : "git",
-                    "url" : "https://source.puri.sm/Librem5/libhandy"
+                    "url" : "https://source.puri.sm/Librem5/libhandy",
+                    "commit" : "56b0aa62f6251ee19a88fc208b7ca8dcf9c9633c"
                 }
             ]
         },
@@ -54,7 +60,7 @@
                 {
                     "type" : "git",
                     "url" : "https://gitlab.gnome.org/GNOME/gtksourceview.git",
-                    "branch" : "gnome-3-24"
+                    "commit" : "c1164374780e42994409f658f56cfbc71215e9c9"
                 }
             ]
         },
