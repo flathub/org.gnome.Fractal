@@ -15,6 +15,7 @@
         "--socket=x11",
         "--socket=wayland",
         "--socket=pulseaudio",
+        "--device=dri",
         "--talk-name=org.freedesktop.secrets",
         "--talk-name=org.freedesktop.Notifications",
         "--filesystem=home"
@@ -47,7 +48,7 @@
                 {
                     "type" : "git",
                     "url" : "https://source.puri.sm/Librem5/libhandy",
-                    "commit" : "56b0aa62f6251ee19a88fc208b7ca8dcf9c9633c"
+                    "commit" : "3d29e42fbebd45d9bbab631ce0f7af9f08dab9d2"
                 }
             ]
         },
@@ -65,6 +66,29 @@
             ]
         },
         {
+            "name": "gspell",
+            "sources" : [
+                {
+                    "type" : "git",
+                    "url" : "https://gitlab.gnome.org/GNOME/gspell.git",
+                    "commit": "edb8674f6c62f3e08d30118f0a1f744fcc39b32a"
+                }
+            ]
+        },
+        {
+            "name" : "gst-editing-services",
+            "config-opts" : [
+                "--disable-Werror"
+            ],
+            "sources" : [
+                {
+                    "type" : "git",
+                    "url" : "https://gitlab.freedesktop.org/gstreamer/gst-editing-services.git",
+                    "tag" : "1.14.4"
+                }
+            ]
+        },
+        {
            "name": "Fractal",
            "buildsystem": "meson",
             "config-opts" : [
@@ -73,8 +97,8 @@
            "sources": [
                {
                    "type": "archive",
-                   "url": "https://gitlab.gnome.org/GNOME/fractal/uploads/ad6a483327c3e9ef5bb926b89fb26e2b/fractal-4.0.0.tar.xz",
-                   "sha256": "10b1ae500f46485d9b8959ab81a40e62109ab2ea48126b2cca2390479bf318a0"
+                   "url": "https://gitlab.gnome.org/GNOME/fractal/uploads/0dcc45d8a1f8f286238d7def68531a03/fractal-4.2.0.tar.xz",
+                   "sha256": "ca73a7b611f763fb05a12c80f6473cc69bf8e7c282a3d9a66216108f9ac40d7f"
                }
            ]
         }
