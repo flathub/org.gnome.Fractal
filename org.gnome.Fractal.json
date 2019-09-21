@@ -45,30 +45,39 @@
                 {
                     "type" : "git",
                     "url" : "https://source.puri.sm/Librem5/libhandy",
-                    "commit" : "3d29e42fbebd45d9bbab631ce0f7af9f08dab9d2"
+                    "tag" : "v0.0.11"
                 }
             ]
         },
         {
             "name" : "gtksourceview",
-            "config-opts" : [
-                "--disable-Werror"
-            ],
+            "buildsystem" : "meson",
             "sources" : [
                 {
                     "type" : "git",
                     "url" : "https://gitlab.gnome.org/GNOME/gtksourceview.git",
-                    "commit" : "c1164374780e42994409f658f56cfbc71215e9c9"
+                    "tag" : "4.4.0"
                 }
             ]
         },
         {
             "name": "gspell",
+            "config-opts" : [
+                "--disable-gtk-doc",
+                "--disable-gtk-doc-html"
+            ],
+            "cleanup" : [
+                "/bin",
+                "/include",
+                "/lib/pkgconfig",
+                "*.la",
+                "/share"
+            ],
             "sources" : [
                 {
-                    "type" : "git",
-                    "url" : "https://gitlab.gnome.org/GNOME/gspell.git",
-                    "commit": "edb8674f6c62f3e08d30118f0a1f744fcc39b32a"
+                    "type" : "archive",
+                    "url" : "https://download.gnome.org/sources/gspell/1.8/gspell-1.8.1.tar.xz",
+                    "sha256" : "819a1d23c7603000e73f5e738bdd284342e0cd345fb0c7650999c31ec741bbe5"
                 }
             ]
         },
@@ -81,7 +90,7 @@
                 {
                     "type" : "git",
                     "url" : "https://gitlab.freedesktop.org/gstreamer/gst-editing-services.git",
-                    "tag" : "1.14.4"
+                    "tag" : "1.16.0"
                 }
             ]
         },
@@ -94,8 +103,8 @@
            "sources": [
                {
                    "type": "archive",
-                   "url": "https://gitlab.gnome.org/GNOME/fractal/uploads/0dcc45d8a1f8f286238d7def68531a03/fractal-4.2.0.tar.xz",
-                   "sha256": "ca73a7b611f763fb05a12c80f6473cc69bf8e7c282a3d9a66216108f9ac40d7f"
+                   "url": "https://gitlab.gnome.org/GNOME/fractal/uploads/b64b7523a811c152b2de11901cfe699e/fractal-4.2.1.tar.xz",
+                   "sha256": "57a15d5913f76016617ac4a01e5673b55dcd5abc315a656cf847b060a18b1f38"
                }
            ]
         }
