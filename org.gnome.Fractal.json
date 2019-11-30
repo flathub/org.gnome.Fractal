@@ -76,8 +76,8 @@
             "sources" : [
                 {
                     "type" : "archive",
-                    "url" : "https://download.gnome.org/sources/gspell/1.8/gspell-1.8.1.tar.xz",
-                    "sha256" : "819a1d23c7603000e73f5e738bdd284342e0cd345fb0c7650999c31ec741bbe5"
+                    "url" : "https://download.gnome.org/sources/gspell/1.8/gspell-1.8.2.tar.xz",
+                    "sha256" : "bb9195c3a95bacf556d0203e9691f7489e0d3bc5ae1e5a440c89b2f2435d3ed6"
                 }
             ]
         },
@@ -90,7 +90,7 @@
                 {
                     "type" : "git",
                     "url" : "https://gitlab.freedesktop.org/gstreamer/gst-editing-services.git",
-                    "tag" : "1.16.0"
+                    "tag" : "1.16.1"
                 }
             ]
         },
@@ -103,8 +103,8 @@
            "sources": [
                {
                    "type": "archive",
-                   "url": "https://gitlab.gnome.org/GNOME/fractal/uploads/b64b7523a811c152b2de11901cfe699e/fractal-4.2.1.tar.xz",
-                   "sha256": "57a15d5913f76016617ac4a01e5673b55dcd5abc315a656cf847b060a18b1f38"
+                   "url": "https://gitlab.gnome.org/GNOME/fractal/uploads/9f2b34d98cfe3c002f3afbfcbf14bc7c/fractal-4.2.2.tar.xz",
+                   "sha256": "320d9a65097a07e08d608c5e55a2e14624db826d358326a5a21aefc901c371ff"
                }
            ]
         }
