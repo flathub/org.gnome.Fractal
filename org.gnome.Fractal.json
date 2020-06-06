@@ -50,17 +50,6 @@
             ]
         },
         {
-            "name" : "gtksourceview",
-            "buildsystem" : "meson",
-            "sources" : [
-                {
-                    "type" : "git",
-                    "url" : "https://gitlab.gnome.org/GNOME/gtksourceview.git",
-                    "tag" : "4.4.0"
-                }
-            ]
-        },
-        {
             "name": "gspell",
             "config-opts" : [
                 "--disable-gtk-doc",
