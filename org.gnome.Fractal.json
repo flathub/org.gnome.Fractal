@@ -20,6 +20,16 @@
     "build-options" : {
         "append-path": "/usr/lib/sdk/rust-stable/bin"
     },
+    "add-extensions": {
+        "org.freedesktop.Platform.ffmpeg-full": {
+            "directory": "lib/ffmpeg",
+            "version": "19.08",
+            "add-ld-path": "."
+        }
+    },
+    "cleanup-commands": [
+        "mkdir -p /app/lib/ffmpeg"
+    ],
     "cleanup": [
         "/include",
         "/lib/pkgconfig",
@@ -45,7 +55,7 @@
                 {
                     "type" : "git",
                     "url" : "https://source.puri.sm/Librem5/libhandy",
-                    "tag" : "v0.0.11"
+                    "tag" : "v0.0.13"
                 }
             ]
         },
@@ -60,7 +70,9 @@
                 "/include",
                 "/lib/pkgconfig",
                 "*.la",
-                "/share"
+                "/share/gir-1.0",
+                "/share/gtk-doc",
+                "/share/vala"
             ],
             "sources" : [
                 {
@@ -84,18 +96,18 @@
             ]
         },
         {
-           "name": "Fractal",
-           "buildsystem": "meson",
+            "name": "Fractal",
+            "buildsystem": "meson",
             "config-opts" : [
                 "-Dprofile=default"
-            ],
-           "sources": [
-               {
-                   "type": "archive",
-                   "url": "https://gitlab.gnome.org/GNOME/fractal/uploads/9f2b34d98cfe3c002f3afbfcbf14bc7c/fractal-4.2.2.tar.xz",
-                   "sha256": "320d9a65097a07e08d608c5e55a2e14624db826d358326a5a21aefc901c371ff"
-               }
-           ]
+             ],
+            "sources": [
+                {
+                    "type" : "archive",
+                    "url" : "https://gitlab.gnome.org/GNOME/fractal/uploads/0ad6369cb908b1106dee7d202dfc5981/fractal-4.4.0.tar.xz",
+                    "sha256": "65af7912f3d04bd6b2386b023415fef26afc48d256af205256f86396a1415825"
+                }
+            ]
         }
     ]
 }
