@@ -104,7 +104,7 @@
             "sources": [
                 {
                     "type" : "archive",
-                    "url" : "https://gitlab.gnome.org/GNOME/fractal/uploads/0ad6369cb908b1106dee7d202dfc5981/fractal-4.4.0.tar.xz",
+                    "url" : "https://gitlab.gnome.org/GNOME/fractal/uploads/d4168ac40fd681240964705e000dd353/fractal-4.4.0.tar.xz",
                     "sha256": "65af7912f3d04bd6b2386b023415fef26afc48d256af205256f86396a1415825"
                 }
             ]
