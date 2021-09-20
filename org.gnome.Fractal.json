@@ -1,7 +1,7 @@
 {
     "app-id": "org.gnome.Fractal",
     "runtime": "org.gnome.Platform",
-    "runtime-version": "3.38",
+    "runtime-version": "41",
     "sdk": "org.gnome.Sdk",
     "sdk-extensions": ["org.freedesktop.Sdk.Extension.rust-stable"],
     "command": "fractal",
@@ -22,7 +22,7 @@
     "add-extensions": {
         "org.freedesktop.Platform.ffmpeg-full": {
             "directory": "lib/ffmpeg",
-            "version": "20.08",
+            "version": "21.08",
             "add-ld-path": "."
         }
     },
@@ -38,26 +38,6 @@
         "/share/vala"
     ],
     "modules": [
-        {
-            "name" : "libhandy",
-            "buildsystem" : "meson",
-            "config-opts" : [
-                "-Dprofiling=false",
-                "-Dintrospection=enabled",
-                "-Dgtk_doc=false",
-                "-Dtests=false",
-                "-Dexamples=false",
-                "-Dvapi=false",
-                "-Dglade_catalog=disabled"
-            ],
-            "sources" : [
-                {
-                    "type" : "git",
-                    "url" : "https://source.puri.sm/Librem5/libhandy",
-                    "tag" : "v0.0.13"
-                }
-            ]
-        },
         {
             "name": "gspell",
             "config-opts" : [
@@ -76,21 +56,19 @@
             "sources" : [
                 {
                     "type" : "archive",
-                    "url" : "https://download.gnome.org/sources/gspell/1.8/gspell-1.8.2.tar.xz",
-                    "sha256" : "bb9195c3a95bacf556d0203e9691f7489e0d3bc5ae1e5a440c89b2f2435d3ed6"
+                    "url" : "https://download.gnome.org/sources/gspell/1.9/gspell-1.9.1.tar.xz",
+                    "sha256" : "dcbb769dfdde8e3c0a8ed3102ce7e661abbf7ddf85df08b29915e92cd723abdd"
                 }
             ]
         },
         {
             "name" : "gst-editing-services",
-            "config-opts" : [
-                "--disable-Werror"
-            ],
+            "buildsystem": "meson",
             "sources" : [
                 {
                     "type" : "git",
                     "url" : "https://gitlab.freedesktop.org/gstreamer/gst-editing-services.git",
-                    "tag" : "1.16.1"
+                    "tag" : "1.18.5"
                 }
             ]
         },
@@ -103,8 +81,8 @@
             "sources": [
                 {
                     "type" : "archive",
-                    "url" : "https://gitlab.gnome.org/GNOME/fractal/uploads/d4168ac40fd681240964705e000dd353/fractal-4.4.0.tar.xz",
-                    "sha256": "65af7912f3d04bd6b2386b023415fef26afc48d256af205256f86396a1415825"
+                    "url" : "https://gitlab.gnome.org/GNOME/fractal/uploads/46141d42ea313ecce83c8843f96d2c42/fractal-4.4.1.tar.xz",
+                    "sha256": "a072c1680aadfedc069755e9f634a6c963268118cd3ac60c3886eb51eeb9e04e"
                 }
             ]
         }
