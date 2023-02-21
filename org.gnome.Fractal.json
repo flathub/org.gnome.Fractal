@@ -1,9 +1,11 @@
 {
     "app-id": "org.gnome.Fractal",
     "runtime": "org.gnome.Platform",
-    "runtime-version": "41",
+    "runtime-version": "43",
     "sdk": "org.gnome.Sdk",
-    "sdk-extensions": ["org.freedesktop.Sdk.Extension.rust-stable"],
+    "sdk-extensions": [
+        "org.freedesktop.Sdk.Extension.rust-stable"
+    ],
     "command": "fractal",
     "finish-args": [
         "--share=network",
@@ -16,13 +18,13 @@
         "--talk-name=org.freedesktop.Notifications",
         "--metadata=X-DConf=migrate-path=/org/gnome/factal/"
     ],
-    "build-options" : {
+    "build-options": {
         "append-path": "/usr/lib/sdk/rust-stable/bin"
     },
     "add-extensions": {
         "org.freedesktop.Platform.ffmpeg-full": {
             "directory": "lib/ffmpeg",
-            "version": "21.08",
+            "version": "22.08",
             "add-ld-path": "."
         }
     },
@@ -39,12 +41,32 @@
     ],
     "modules": [
         {
+            "name": "libhandy",
+            "buildsystem": "meson",
+            "config-opts": [
+                "-Dprofiling=false",
+                "-Dintrospection=enabled",
+                "-Dgtk_doc=false",
+                "-Dtests=false",
+                "-Dexamples=false",
+                "-Dvapi=false",
+                "-Dglade_catalog=disabled"
+            ],
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "https://source.puri.sm/Librem5/libhandy",
+                    "tag": "v0.0.13"
+                }
+            ]
+        },
+        {
             "name": "gspell",
-            "config-opts" : [
+            "config-opts": [
                 "--disable-gtk-doc",
                 "--disable-gtk-doc-html"
             ],
-            "cleanup" : [
+            "cleanup": [
                 "/bin",
                 "/include",
                 "/lib/pkgconfig",
@@ -53,36 +75,37 @@
                 "/share/gtk-doc",
                 "/share/vala"
             ],
-            "sources" : [
+            "sources": [
                 {
-                    "type" : "archive",
-                    "url" : "https://download.gnome.org/sources/gspell/1.9/gspell-1.9.1.tar.xz",
-                    "sha256" : "dcbb769dfdde8e3c0a8ed3102ce7e661abbf7ddf85df08b29915e92cd723abdd"
+                    "type": "archive",
+                    "url": "https://download.gnome.org/sources/gspell/1.8/gspell-1.8.4.tar.xz",
+                    "sha256": "cf4d16a716e813449bd631405dc1001ea89537b8cdae2b8abfb3999212bd43b4"
                 }
             ]
         },
         {
-            "name" : "gst-editing-services",
+            "name": "gst-editing-services",
             "buildsystem": "meson",
-            "sources" : [
+            "sources": [
                 {
-                    "type" : "git",
-                    "url" : "https://gitlab.freedesktop.org/gstreamer/gst-editing-services.git",
-                    "tag" : "1.18.5"
+                    "type": "git",
+                    "url": "https://gitlab.freedesktop.org/gstreamer/gst-editing-services.git",
+                    "tag": "1.18.5",
+                    "commit": "29dcc5c1a54f1fabf470bff15dd92b266c527909"
                 }
             ]
         },
         {
             "name": "Fractal",
             "buildsystem": "meson",
-            "config-opts" : [
+            "config-opts": [
                 "-Dprofile=default"
-             ],
+            ],
             "sources": [
                 {
-                    "type" : "archive",
-                    "url" : "https://gitlab.gnome.org/GNOME/fractal/uploads/46141d42ea313ecce83c8843f96d2c42/fractal-4.4.1.tar.xz",
-                    "sha256": "a072c1680aadfedc069755e9f634a6c963268118cd3ac60c3886eb51eeb9e04e"
+                    "type": "archive",
+                    "url": "https://gitlab.gnome.org/GNOME/fractal/uploads/0e0f05c9b27b94d5c280317867916fa8/fractal-4.4.2-beta2.tar.xz",
+                    "sha256": "5ada7f78249e805586e37205756b473904a9c001c0a2ea02a71f8c7cc9f024c0"
                 }
             ]
         }
