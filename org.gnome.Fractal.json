@@ -1,9 +1,11 @@
 {
     "app-id": "org.gnome.Fractal",
     "runtime": "org.gnome.Platform",
-    "runtime-version": "41",
+    "runtime-version": "43",
     "sdk": "org.gnome.Sdk",
-    "sdk-extensions": ["org.freedesktop.Sdk.Extension.rust-stable"],
+    "sdk-extensions": [
+        "org.freedesktop.Sdk.Extension.rust-stable"
+    ],
     "command": "fractal",
     "finish-args": [
         "--share=network",
@@ -16,13 +18,13 @@
         "--talk-name=org.freedesktop.Notifications",
         "--metadata=X-DConf=migrate-path=/org/gnome/factal/"
     ],
-    "build-options" : {
+    "build-options": {
         "append-path": "/usr/lib/sdk/rust-stable/bin"
     },
     "add-extensions": {
         "org.freedesktop.Platform.ffmpeg-full": {
             "directory": "lib/ffmpeg",
-            "version": "21.08",
+            "version": "22.08",
             "add-ld-path": "."
         }
     },
@@ -39,9 +41,9 @@
     ],
     "modules": [
         {
-            "name" : "libhandy",
-            "buildsystem" : "meson",
-            "config-opts" : [
+            "name": "libhandy",
+            "buildsystem": "meson",
+            "config-opts": [
                 "-Dprofiling=false",
                 "-Dintrospection=enabled",
                 "-Dgtk_doc=false",
@@ -50,21 +52,21 @@
                 "-Dvapi=false",
                 "-Dglade_catalog=disabled"
             ],
-            "sources" : [
+            "sources": [
                 {
-                    "type" : "git",
-                    "url" : "https://source.puri.sm/Librem5/libhandy",
-                    "tag" : "v0.0.13"
+                    "type": "git",
+                    "url": "https://source.puri.sm/Librem5/libhandy",
+                    "tag": "v0.0.13"
                 }
             ]
         },
         {
             "name": "gspell",
-            "config-opts" : [
+            "config-opts": [
                 "--disable-gtk-doc",
                 "--disable-gtk-doc-html"
             ],
-            "cleanup" : [
+            "cleanup": [
                 "/bin",
                 "/include",
                 "/lib/pkgconfig",
@@ -73,37 +75,37 @@
                 "/share/gtk-doc",
                 "/share/vala"
             ],
-            "sources" : [
+            "sources": [
                 {
-                    "type" : "archive",
-                    "url" : "https://download.gnome.org/sources/gspell/1.8/gspell-1.8.4.tar.xz",
-                    "sha256" : "cf4d16a716e813449bd631405dc1001ea89537b8cdae2b8abfb3999212bd43b4"
+                    "type": "archive",
+                    "url": "https://download.gnome.org/sources/gspell/1.8/gspell-1.8.4.tar.xz",
+                    "sha256": "cf4d16a716e813449bd631405dc1001ea89537b8cdae2b8abfb3999212bd43b4"
                 }
             ]
         },
         {
-            "name" : "gst-editing-services",
+            "name": "gst-editing-services",
             "buildsystem": "meson",
-            "sources" : [
+            "sources": [
                 {
-                    "type" : "git",
-                    "url" : "https://gitlab.freedesktop.org/gstreamer/gst-editing-services.git",
-                    "tag" : "1.18.5",
-                    "commit" : "29dcc5c1a54f1fabf470bff15dd92b266c527909"
+                    "type": "git",
+                    "url": "https://gitlab.freedesktop.org/gstreamer/gst-editing-services.git",
+                    "tag": "1.18.5",
+                    "commit": "29dcc5c1a54f1fabf470bff15dd92b266c527909"
                 }
             ]
         },
         {
             "name": "Fractal",
             "buildsystem": "meson",
-            "config-opts" : [
+            "config-opts": [
                 "-Dprofile=default"
-             ],
+            ],
             "sources": [
                 {
-                    "type" : "archive",
-                    "url" : "https://gitlab.gnome.org/GNOME/fractal/uploads/d4168ac40fd681240964705e000dd353/fractal-4.4.0.tar.xz",
-                    "sha256": "65af7912f3d04bd6b2386b023415fef26afc48d256af205256f86396a1415825"
+                    "type": "archive",
+                    "url": "https://gitlab.gnome.org/GNOME/fractal/uploads/1780626f0f31f0296675f4ad2ffec658/fractal-4.4.2.tar.xz",
+                    "sha256": "c0460d59fc44f273453aa8d9bb958f7f7da2db85b5799cda8250d6605dd0f4b6"
                 }
             ]
         }
