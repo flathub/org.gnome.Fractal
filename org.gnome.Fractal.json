@@ -55,8 +55,9 @@
             "sources": [
                 {
                     "type": "git",
-                    "url": "https://source.puri.sm/Librem5/libhandy",
-                    "tag": "v0.0.13"
+                    "url": "https://gitlab.gnome.org/GNOME/libhandy.git",
+                    "tag": "v0.0.13",
+                    "commit": "7a193d7692c9c76a1a94f17c4d30b585f77d177c"
                 }
             ]
         },
@@ -78,8 +79,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://download.gnome.org/sources/gspell/1.8/gspell-1.8.4.tar.xz",
-                    "sha256": "cf4d16a716e813449bd631405dc1001ea89537b8cdae2b8abfb3999212bd43b4"
+                    "url": "https://download.gnome.org/sources/gspell/1.12/gspell-1.12.0.tar.xz",
+                    "sha256": "40d2850f1bb6e8775246fa1e39438b36caafbdbada1d28a19fa1ca07e1ff82ad"
                 }
             ]
         },
@@ -88,10 +89,9 @@
             "buildsystem": "meson",
             "sources": [
                 {
-                    "type": "git",
-                    "url": "https://gitlab.freedesktop.org/gstreamer/gst-editing-services.git",
-                    "tag": "1.18.5",
-                    "commit": "29dcc5c1a54f1fabf470bff15dd92b266c527909"
+                    "type": "archive",
+                    "url": "https://gstreamer.freedesktop.org/src/gst-editing-services/gst-editing-services-1.20.6.tar.xz",
+                    "sha256": "150e6f2acafce96d9f363a4af4b034f2cd034cf41e03fccfcee50181648761bb"
                 }
             ]
         },
