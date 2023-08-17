@@ -47,9 +47,9 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://gitlab.gnome.org/GNOME/fractal/-/package_files/366/download",
-                    "sha256": "24ac170b19f54d926b1ba30c3f1dafb37fde619c67741a2e3cba6ca3fbb66c4d",
-                    "dest-filename": "fractal-5.beta1.tar.xz"
+                    "url": "https://gitlab.gnome.org/GNOME/fractal/-/package_files/409/download",
+                    "sha256": "534d1e60a2794029ab92e046695b46605726303fb48dfbe518f13e06e7f8a6e1",
+                    "dest-filename": "fractal-5.beta2.tar.xz"
                 }
             ]
         }
