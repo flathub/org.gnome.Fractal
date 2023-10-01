@@ -1,7 +1,7 @@
 {
     "app-id": "org.gnome.Fractal",
     "runtime": "org.gnome.Platform",
-    "runtime-version": "44",
+    "runtime-version": "45",
     "sdk": "org.gnome.Sdk",
     "sdk-extensions": [
         "org.freedesktop.Sdk.Extension.rust-stable"
@@ -24,7 +24,7 @@
     "add-extensions": {
         "org.freedesktop.Platform.ffmpeg-full": {
             "directory": "lib/ffmpeg",
-            "version": "22.08",
+            "version": "23.08",
             "add-ld-path": "."
         }
     },
@@ -79,19 +79,35 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://download.gnome.org/sources/gspell/1.12/gspell-1.12.0.tar.xz",
-                    "sha256": "40d2850f1bb6e8775246fa1e39438b36caafbdbada1d28a19fa1ca07e1ff82ad"
+                    "url": "https://download.gnome.org/sources/gspell/1.12/gspell-1.12.2.tar.xz",
+                    "sha256": "b4e993bd827e4ceb6a770b1b5e8950fce3be9c8b2b0cbeb22fdf992808dd2139"
                 }
             ]
         },
         {
             "name": "gst-editing-services",
             "buildsystem": "meson",
+            "config-opts": [
+                "-Ddoc=disabled",
+                "-Dexamples=disabled",
+                "-Dtools=disabled"
+            ],
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://gstreamer.freedesktop.org/src/gst-editing-services/gst-editing-services-1.20.6.tar.xz",
-                    "sha256": "150e6f2acafce96d9f363a4af4b034f2cd034cf41e03fccfcee50181648761bb"
+                    "url": "https://gstreamer.freedesktop.org/src/gst-editing-services/gst-editing-services-1.22.6.tar.xz",
+                    "sha256": "748d423672c597f876e130804fb984848f5b4b89efd78a506cb17f7646795301"
+                }
+            ]
+        },
+        {
+            "name": "gtksourceview4",
+            "buildsystem" : "meson",
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "https://download.gnome.org/sources/gtksourceview/4.8/gtksourceview-4.8.4.tar.xz",
+                    "sha256": "7ec9d18fb283d1f84a3a3eff3b7a72b09a10c9c006597b3fbabbb5958420a87d"
                 }
             ]
         },
