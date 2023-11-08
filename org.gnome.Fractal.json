@@ -1,11 +1,11 @@
 {
     "app-id": "org.gnome.Fractal",
     "runtime": "org.gnome.Platform",
-    "runtime-version": "44",
+    "runtime-version": "45",
     "sdk": "org.gnome.Sdk",
     "sdk-extensions": [
         "org.freedesktop.Sdk.Extension.rust-stable",
-        "org.freedesktop.Sdk.Extension.llvm15"
+        "org.freedesktop.Sdk.Extension.llvm16"
     ],
     "command": "fractal",
     "finish-args": [
@@ -18,8 +18,8 @@
         "--env=RUST_LOG=fractal=info,warn"
     ],
     "build-options": {
-        "append-ld-library-path": "/usr/lib/sdk/llvm15/lib",
-        "append-path": "/usr/lib/sdk/llvm15/bin:/usr/lib/sdk/rust-stable/bin"
+        "append-ld-library-path": "/usr/lib/sdk/llvm16/lib",
+        "append-path": "/usr/lib/sdk/llvm16/bin:/usr/lib/sdk/rust-stable/bin"
     },
     "modules": [
         {
@@ -33,8 +33,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://download.gnome.org/sources/libshumate/1.0/libshumate-1.0.3.tar.xz",
-                    "sha256": "77a192f0dfec082b8de20b1939f3adf03eed41114d49fdaae2bbb2729ceb015a"
+                    "url": "https://download.gnome.org/sources/libshumate/1.1/libshumate-1.1.0.tar.xz",
+                    "sha256": "b3b7c4c2d3002f37b951c9ca99b09275d0aa82265c69f53374ce12faefd3b14e"
                 }
             ]
         },
@@ -47,9 +47,9 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://gitlab.gnome.org/GNOME/fractal/-/package_files/409/download",
-                    "sha256": "534d1e60a2794029ab92e046695b46605726303fb48dfbe518f13e06e7f8a6e1",
-                    "dest-filename": "fractal-5.beta2.tar.xz"
+                    "url": "https://gitlab.gnome.org/GNOME/fractal/-/package_files/473/download",
+                    "sha256": "e63de43a067ac68c3a4b282e1c842c6eb9fa9bd551f88bd613be0253e7737920",
+                    "dest-filename": "fractal-5.rc1.tar.xz"
                 }
             ]
         }
