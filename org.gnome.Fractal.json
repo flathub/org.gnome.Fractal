@@ -4,7 +4,8 @@
     "runtime-version": "45",
     "sdk": "org.gnome.Sdk",
     "sdk-extensions": [
-        "org.freedesktop.Sdk.Extension.rust-stable"
+        "org.freedesktop.Sdk.Extension.rust-stable",
+        "org.freedesktop.Sdk.Extension.llvm16"
     ],
     "command": "fractal",
     "finish-args": [
@@ -14,105 +15,31 @@
         "--socket=wayland",
         "--socket=pulseaudio",
         "--device=dri",
-        "--talk-name=org.freedesktop.secrets",
-        "--talk-name=org.freedesktop.Notifications",
-        "--metadata=X-DConf=migrate-path=/org/gnome/factal/"
+        "--env=RUST_LOG=fractal=info,warn"
     ],
     "build-options": {
-        "append-path": "/usr/lib/sdk/rust-stable/bin"
+        "append-ld-library-path": "/usr/lib/sdk/llvm16/lib",
+        "append-path": "/usr/lib/sdk/llvm16/bin:/usr/lib/sdk/rust-stable/bin"
     },
-    "add-extensions": {
-        "org.freedesktop.Platform.ffmpeg-full": {
-            "directory": "lib/ffmpeg",
-            "version": "23.08",
-            "add-ld-path": "."
-        }
-    },
-    "cleanup-commands": [
-        "mkdir -p /app/lib/ffmpeg"
-    ],
-    "cleanup": [
-        "/include",
-        "/lib/pkgconfig",
-        "/lib/*.la",
-        "/lib/girepository-1.0",
-        "/share/gir-1.0",
-        "/share/vala"
-    ],
     "modules": [
         {
-            "name": "libhandy",
+            "name": "libshumate",
             "buildsystem": "meson",
             "config-opts": [
-                "-Dprofiling=false",
-                "-Dintrospection=enabled",
-                "-Dgtk_doc=false",
-                "-Dtests=false",
-                "-Dexamples=false",
+                "-Dgir=false",
                 "-Dvapi=false",
-                "-Dglade_catalog=disabled"
-            ],
-            "sources": [
-                {
-                    "type": "git",
-                    "url": "https://gitlab.gnome.org/GNOME/libhandy.git",
-                    "tag": "v0.0.13",
-                    "commit": "7a193d7692c9c76a1a94f17c4d30b585f77d177c"
-                }
-            ]
-        },
-        {
-            "name": "gspell",
-            "config-opts": [
-                "--disable-gtk-doc",
-                "--disable-gtk-doc-html"
-            ],
-            "cleanup": [
-                "/bin",
-                "/include",
-                "/lib/pkgconfig",
-                "*.la",
-                "/share/gir-1.0",
-                "/share/gtk-doc",
-                "/share/vala"
+                "-Dgtk_doc=false"
             ],
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://download.gnome.org/sources/gspell/1.12/gspell-1.12.2.tar.xz",
-                    "sha256": "b4e993bd827e4ceb6a770b1b5e8950fce3be9c8b2b0cbeb22fdf992808dd2139"
+                    "url": "https://download.gnome.org/sources/libshumate/1.1/libshumate-1.1.0.tar.xz",
+                    "sha256": "b3b7c4c2d3002f37b951c9ca99b09275d0aa82265c69f53374ce12faefd3b14e"
                 }
             ]
         },
         {
-            "name": "gst-editing-services",
-            "buildsystem": "meson",
-            "config-opts": [
-                "-Ddoc=disabled",
-                "-Dexamples=disabled",
-                "-Dtools=disabled"
-            ],
-            "sources": [
-                {
-                    "type": "archive",
-                    "url": "https://gstreamer.freedesktop.org/src/gst-editing-services/gst-editing-services-1.22.6.tar.xz",
-                    "sha256": "748d423672c597f876e130804fb984848f5b4b89efd78a506cb17f7646795301"
-                }
-            ]
-        },
-        {
-            "name": "gtksourceview4",
-            "buildsystem" : "meson",
-            "sources": [
-                {
-                    "type": "archive",
-                    "url": "https://download.gnome.org/sources/gtksourceview/4.8/gtksourceview-4.8.4.tar.xz",
-                    "sha256": "7ec9d18fb283d1f84a3a3eff3b7a72b09a10c9c006597b3fbabbb5958420a87d"
-                }
-            ]
-        },
-        {
-            "name": "Fractal",
+            "name": "fractal",
             "buildsystem": "meson",
             "config-opts": [
                 "-Dprofile=default"
@@ -120,8 +47,9 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://gitlab.gnome.org/GNOME/fractal/uploads/1780626f0f31f0296675f4ad2ffec658/fractal-4.4.2.tar.xz",
-                    "sha256": "c0460d59fc44f273453aa8d9bb958f7f7da2db85b5799cda8250d6605dd0f4b6"
+                    "url": "https://gitlab.gnome.org/GNOME/fractal/-/package_files/479/download",
+                    "sha256": "b4ec8435aa94e1b963049cb618c0fb3e175bf9f3016ed890c429dfa8b93a2884",
+                    "dest-filename": "fractal-5.tar.xz"
                 }
             ]
         }
