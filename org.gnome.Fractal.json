@@ -47,8 +47,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://gitlab.gnome.org/GNOME/fractal/-/releases/6.rc/downloads/tarball/fractal-6.rc.tar.xz",
-                    "sha256": "258ec5c774776647703dd58ea416bb04e7b30b5a5d809ff237a954cbed1433fa"
+                    "url": "https://gitlab.gnome.org/GNOME/fractal/-/releases/6/downloads/tarball/fractal-6.tar.xz",
+                    "sha256": "37db30fe4549d553ea07808f7d0eeff220008d19ca7b4df20ab7084b27751996"
                 }
             ]
         }
