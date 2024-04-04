@@ -18,7 +18,10 @@
     ],
     "build-options": {
         "append-ld-library-path": "/usr/lib/sdk/llvm16/lib",
-        "append-path": "/usr/lib/sdk/llvm16/bin:/usr/lib/sdk/rust-stable/bin"
+        "append-path": "/usr/lib/sdk/llvm16/bin:/usr/lib/sdk/rust-stable/bin",
+        "env": {
+            "CARGO_HOME": "/run/build/fractal/cargo"
+        }
     },
     "modules": [
         {
@@ -74,10 +77,12 @@
             ],
             "sources": [
                 {
-                    "type": "archive",
-                    "url": "https://gitlab.gnome.org/GNOME/fractal/-/releases/7.beta/downloads/tarball/fractal-7.beta.tar.xz",
-                    "sha256": "9b91087d6b80ff0b2f02e00f881c4876db557b46afd374333475be16d930b38f"
-                }
+                    "type": "git",
+                    "url": "https://gitlab.gnome.org/World/fractal.git",
+                    "tag": "7.beta",
+                    "commit": "7b3a099aaada87a983dfcd4dcd9f11a183a336cf"
+                },
+                "cargo-sources.json"
             ]
         }
     ]
