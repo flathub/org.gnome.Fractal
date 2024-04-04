@@ -73,14 +73,14 @@
             "name": "fractal",
             "buildsystem": "meson",
             "config-opts": [
-                "-Dprofile=beta"
+                "-Dprofile=beta",
+                "-Dsandboxed=true"
             ],
             "sources": [
                 {
                     "type": "git",
-                    "url": "https://gitlab.gnome.org/World/fractal.git",
-                    "tag": "7.beta",
-                    "commit": "7b3a099aaada87a983dfcd4dcd9f11a183a336cf"
+                    "url": "https://gitlab.gnome.org/kcommaille/fractal.git",
+                    "commit": "80f73e42332dfb7968780e57c5ce103134df9a46"
                 },
                 "cargo-sources.json"
             ]

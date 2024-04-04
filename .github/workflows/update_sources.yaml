@@ -2,7 +2,8 @@ name: Update sources
 
 env:
   MANIFEST: org.gnome.Fractal.json
-  FLATPAK_BUILDER_TOOLS_REPO: https://github.com/flatpak/flatpak-builder-tools.git
+  FLATPAK_BUILDER_TOOLS_REPO: https://github.com/zecakeh/flatpak-builder-tools.git
+  FLATPAK_BUILDER_TOOLS_BRANCH: cargo-fixes
 
 on:
   pull_request:
@@ -29,26 +30,29 @@ jobs:
       - name: Get project variables
         run: |
           echo "UPSTREAM_REPO=$(cat $MANIFEST | jq -r '.modules[-1].sources[0].url')" >> $GITHUB_ENV
-          echo "UPSTREAM_TAG=$(cat $MANIFEST | jq -r '.modules[-1].sources[0].tag')" >> $GITHUB_ENV
+          # echo "UPSTREAM_TAG=$(cat $MANIFEST | jq -r '.modules[-1].sources[0].tag')" >> $GITHUB_ENV
           echo "UPSTREAM_COMMIT=$(cat $MANIFEST | jq -r '.modules[-1].sources[0].commit')" >> $GITHUB_ENV
       
       - name: Get Cargo.lock
         run: |
-          git clone -b $UPSTREAM_TAG --depth 1 $UPSTREAM_REPO ci_sources/upstream_source
+          # git clone -b $UPSTREAM_TAG --depth 1 $UPSTREAM_REPO ci_sources/upstream_source
 
-          # Check that the tag commit matches the one in the Flatpak manifest
+          # # Check that the tag commit matches the one in the Flatpak manifest
+          # cd ci_sources/upstream_source
+          # tag_commit=$(git rev-parse HEAD)
+          # if [[ $tag_commit != $UPSTREAM_COMMIT ]]; then
+          #   echo "Commit of tag $UPSTREAM_TAG does not match Flatpak manifest commit: $tag_commit"
+          #   exit 1
+          # else
+          #   echo "Commit of tag $UPSTREAM_TAG matches Flatpak manifest commit: $tag_commit"
+          # fi
+          git clone $UPSTREAM_REPO ci_sources/upstream_source
           cd ci_sources/upstream_source
-          tag_commit=$(git rev-parse HEAD)
-          if [[ $tag_commit != $UPSTREAM_COMMIT ]]; then
-            echo "Commit of tag $UPSTREAM_TAG does not match Flatpak manifest commit: $tag_commit"
-            exit 1
-          else
-            echo "Commit of tag $UPSTREAM_TAG matches Flatpak manifest commit: $tag_commit"
-          fi
+          git checkout $UPSTREAM_COMMIT
       
       - name: Get flatpak-cargo-generator.py
         run: |
-          git clone --depth 1 $FLATPAK_BUILDER_TOOLS_REPO ci_sources/flatpak-builder-tools
+          git clone -b $FLATPAK_BUILDER_TOOLS_BRANCH --depth 1 $FLATPAK_BUILDER_TOOLS_REPO ci_sources/flatpak-builder-tools
       
       - name: Regenerate cargo-sources.json
         run: |
