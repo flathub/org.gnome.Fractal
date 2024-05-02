@@ -6,7 +6,7 @@ env:
 
 on:
   pull_request:
-    branches: [main, beta]
+    branches: [master, beta]
     paths:
       - 'org.gnome.Fractal.json'
 
@@ -63,5 +63,11 @@ jobs:
           git config user.email "$GIT_AUTHOR_EMAIL"
           git config user.name "$GIT_AUTHOR_NAME"
           git add cargo-sources.json
-          git commit -m "Update cargo-sources.json"
-          git push
+          
+          staged_files=`git diff --name-only --cached`
+          if [[ -n $staged_files ]]; then
+            git commit -m "Update cargo-sources.json"
+            git push
+          else
+            echo "cargo-sources.json did not change, commit skipped"
+          fi
