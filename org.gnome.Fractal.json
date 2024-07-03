@@ -22,30 +22,55 @@
     },
     "modules": [
         {
-            "name" : "protobuf",
-            "buildsystem" : "autotools",
-            "config-opts": [ "DIST_LANG=cpp" ],
-            "cleanup" : [
-                "/bin/protoc*",
-                "/lib/libprotoc*",
-                "/lib/libprotobuf-lite*"
+            "name": "abseil",
+            "buildsystem": "cmake-ninja",
+            "config-opts": [
+              "-DCMAKE_CXX_STANDARD=17",
+              "-DCMAKE_POSITION_INDEPENDENT_CODE=ON",
+              "-DBUILD_SHARED_LIBS=ON",
+              "-DABSL_PROPAGATE_CXX_STD=ON"
             ],
-            "sources" : [
+            "sources": [
                 {
-                    "type" : "archive",
-                    "url" : "https://github.com/protocolbuffers/protobuf/releases/download/v3.17.3/protobuf-all-3.17.3.tar.gz",
-                    "sha256" : "77ad26d3f65222fd96ccc18b055632b0bfedf295cb748b712a98ba1ac0b704b2"
+                    "type": "git",
+                    "url": "https://github.com/abseil/abseil-cpp.git",
+                    "tag": "20240116.2",
+                    "commit": "d7aaad83b488fd62bd51c81ecf16cd938532cc0a"
                 }
             ]
         },
         {
-            "name" : "protobuf-c",
-            "buildsystem" : "autotools",
-            "sources" : [
+            "name": "protobuf",
+            "buildsystem": "cmake-ninja",
+            "config-opts": [
+                "-DCMAKE_POSITION_INDEPENDENT_CODE=ON",
+                "-Dprotobuf_ABSL_PROVIDER=package",
+                "-Dprotobuf_BUILD_SHARED_LIBS=ON",
+                "-Dprotobuf_BUILD_TESTS=OFF"
+            ],
+            "cleanup": [
+                "/bin/protoc*",
+                "/lib/libprotoc*",
+                "/lib/libprotobuf-lite*"
+            ],
+            "sources": [
                 {
-                    "type" : "archive",
-                    "url" : "https://github.com/protobuf-c/protobuf-c/releases/download/v1.4.0/protobuf-c-1.4.0.tar.gz",
-                    "sha256" : "26d98ee9bf18a6eba0d3f855ddec31dbe857667d269bc0b6017335572f85bbcb"
+                    "type": "git",
+                    "url": "https://github.com/protocolbuffers/protobuf.git",
+                    "tag": "v25.3",
+                    "commit": "4a2aef570deb2bfb8927426558701e8bfc26f2a4"
+                }
+            ]
+        },
+        {
+            "name": "protobuf-c",
+            "buildsystem": "autotools",
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "https://github.com/protobuf-c/protobuf-c.git",
+                    "tag": "v1.5.0",
+                    "commit": "8c201f6e47a53feaab773922a743091eb6c8972a"
                 }
             ]
         },
@@ -60,9 +85,10 @@
             ],
             "sources": [
                 {
-                    "type": "archive",
-                    "url": "https://download.gnome.org/sources/libshumate/1.2/libshumate-1.2.0.tar.xz",
-                    "sha256": "4f8413a707cd00f84cee39ca49f58c48fc436f008ea80d6532ac37dafd0ba96b"
+                    "type": "git",
+                    "url": "https://gitlab.gnome.org/GNOME/libshumate.git",
+                    "tag": "1.2.2",
+                    "commit": "fab290f36bb7043fe6107308ff4f91c80492aa11"
                 }
             ]
         },
@@ -77,8 +103,8 @@
                 {
                     "type": "git",
                     "url": "https://gitlab.gnome.org/World/fractal.git",
-                    "tag": "7",
-                    "commit": "dec825bbf41a9f388660b5c2235847821b298441"
+                    "tag": "8.beta",
+                    "commit": "c0ffcbd40774365395ee258fd7ca012e14b8e301"
                 },
                 "cargo-sources.json"
             ]
