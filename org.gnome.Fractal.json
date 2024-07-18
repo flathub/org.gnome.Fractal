@@ -22,49 +22,11 @@
     },
     "modules": [
         {
-            "name": "abseil",
-            "buildsystem": "cmake-ninja",
-            "config-opts": [
-              "-DCMAKE_CXX_STANDARD=17",
-              "-DCMAKE_POSITION_INDEPENDENT_CODE=ON",
-              "-DBUILD_SHARED_LIBS=ON",
-              "-DABSL_PROPAGATE_CXX_STD=ON"
-            ],
-            "sources": [
-                {
-                    "type": "git",
-                    "url": "https://github.com/abseil/abseil-cpp.git",
-                    "tag": "20240116.2",
-                    "commit": "d7aaad83b488fd62bd51c81ecf16cd938532cc0a"
-                }
-            ]
-        },
-        {
-            "name": "protobuf",
-            "buildsystem": "cmake-ninja",
-            "config-opts": [
-                "-DCMAKE_POSITION_INDEPENDENT_CODE=ON",
-                "-Dprotobuf_ABSL_PROVIDER=package",
-                "-Dprotobuf_BUILD_SHARED_LIBS=ON",
-                "-Dprotobuf_BUILD_TESTS=OFF"
-            ],
-            "cleanup": [
-                "/bin/protoc*",
-                "/lib/libprotoc*",
-                "/lib/libprotobuf-lite*"
-            ],
-            "sources": [
-                {
-                    "type": "git",
-                    "url": "https://github.com/protocolbuffers/protobuf.git",
-                    "tag": "v25.3",
-                    "commit": "4a2aef570deb2bfb8927426558701e8bfc26f2a4"
-                }
-            ]
-        },
-        {
             "name": "protobuf-c",
             "buildsystem": "autotools",
+            "config-opts": [
+                "--disable-protoc"
+            ],
             "sources": [
                 {
                     "type": "git",
@@ -103,8 +65,8 @@
                 {
                     "type": "git",
                     "url": "https://gitlab.gnome.org/World/fractal.git",
-                    "tag": "8.beta",
-                    "commit": "c0ffcbd40774365395ee258fd7ca012e14b8e301"
+                    "tag": "8.rc",
+                    "commit": "d87059b16f575edd322997060023a405a58e7685"
                 },
                 "cargo-sources.json"
             ]
