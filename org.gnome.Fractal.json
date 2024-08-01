@@ -22,30 +22,17 @@
     },
     "modules": [
         {
-            "name" : "protobuf",
-            "buildsystem" : "autotools",
-            "config-opts": [ "DIST_LANG=cpp" ],
-            "cleanup" : [
-                "/bin/protoc*",
-                "/lib/libprotoc*",
-                "/lib/libprotobuf-lite*"
+            "name": "protobuf-c",
+            "buildsystem": "autotools",
+            "config-opts": [
+                "--disable-protoc"
             ],
-            "sources" : [
+            "sources": [
                 {
-                    "type" : "archive",
-                    "url" : "https://github.com/protocolbuffers/protobuf/releases/download/v3.17.3/protobuf-all-3.17.3.tar.gz",
-                    "sha256" : "77ad26d3f65222fd96ccc18b055632b0bfedf295cb748b712a98ba1ac0b704b2"
-                }
-            ]
-        },
-        {
-            "name" : "protobuf-c",
-            "buildsystem" : "autotools",
-            "sources" : [
-                {
-                    "type" : "archive",
-                    "url" : "https://github.com/protobuf-c/protobuf-c/releases/download/v1.4.0/protobuf-c-1.4.0.tar.gz",
-                    "sha256" : "26d98ee9bf18a6eba0d3f855ddec31dbe857667d269bc0b6017335572f85bbcb"
+                    "type": "git",
+                    "url": "https://github.com/protobuf-c/protobuf-c.git",
+                    "tag": "v1.5.0",
+                    "commit": "8c201f6e47a53feaab773922a743091eb6c8972a"
                 }
             ]
         },
@@ -60,9 +47,10 @@
             ],
             "sources": [
                 {
-                    "type": "archive",
-                    "url": "https://download.gnome.org/sources/libshumate/1.2/libshumate-1.2.0.tar.xz",
-                    "sha256": "4f8413a707cd00f84cee39ca49f58c48fc436f008ea80d6532ac37dafd0ba96b"
+                    "type": "git",
+                    "url": "https://gitlab.gnome.org/GNOME/libshumate.git",
+                    "tag": "1.2.2",
+                    "commit": "fab290f36bb7043fe6107308ff4f91c80492aa11"
                 }
             ]
         },
@@ -77,8 +65,8 @@
                 {
                     "type": "git",
                     "url": "https://gitlab.gnome.org/World/fractal.git",
-                    "tag": "7",
-                    "commit": "dec825bbf41a9f388660b5c2235847821b298441"
+                    "tag": "8",
+                    "commit": "10611e379ee8eb02a97f9fe01f0c4489f36f4efa"
                 },
                 "cargo-sources.json"
             ]
