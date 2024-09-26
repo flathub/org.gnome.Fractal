@@ -116,10 +116,9 @@
             ],
             "sources": [
                 {
-                    "type": "git",
-                    "url": "https://gitlab.gnome.org/sophie-h/glycin.git",
-                    "tag": "1.1.1",
-                    "commit": "ce58882288245c1650a444243e0e90c87e53f835"
+                    "type": "archive",
+                    "url": "https://download.gnome.org/sources/glycin/1.1/glycin-1.1.1.tar.xz",
+                    "sha256": "560ee42167c1ed22826618e61d83e49140db5bf47a65a9ba8ece2cd73d2a4aa8"
                 }
             ]
         },
