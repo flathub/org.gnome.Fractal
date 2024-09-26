@@ -127,7 +127,7 @@
             "buildsystem": "meson",
             "config-opts": [
                 "-Dprofile=beta",
-                "-Dsandboxed=true"
+                "-Dsandboxed-build=true"
             ],
             "sources": [
                 {
