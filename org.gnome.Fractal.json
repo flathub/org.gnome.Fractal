@@ -28,7 +28,33 @@
             "autodelete": true
         }
     },
+    "cleanup": [
+        "bin/grass"
+    ],
     "modules": [
+        {
+            "name": "grass",
+            "buildsystem": "simple",
+            "build-options": {
+                "env": {
+                    "CARGO_HOME": "/run/build/grass/cargo"
+                }
+            },
+            "build-commands": [
+                "cargo build --release --locked",
+                "mkdir -p /app/bin",
+                "install -D ./target/release/grass /app/bin/"
+            ],
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "https://github.com/connorskees/grass",
+                    "tag": "0.13.4",
+                    "commit": "e0bb9e2eabfc3a58e42b03089cd7b22c68d09d0b"
+                },
+                "grass-cargo-sources.json"
+            ]
+        },
         {
             "name": "protobuf-c",
             "buildsystem": "autotools",
@@ -116,9 +142,20 @@
             ],
             "sources": [
                 {
-                    "type": "archive",
-                    "url": "https://download.gnome.org/sources/glycin/1.1/glycin-1.1.1.tar.xz",
-                    "sha256": "560ee42167c1ed22826618e61d83e49140db5bf47a65a9ba8ece2cd73d2a4aa8"
+                    "type": "git",
+                    "url": "https://gitlab.gnome.org/GNOME/glycin",
+                    "tag": "1.1.2",
+                    "commit": "ec00d78b3e4f48030011601fcf991d0749fa3dab",
+                    "disable-submodules": true
+                },
+                "glycin-loaders-cargo-sources.json",
+                {
+                    "type": "shell",
+                    "commands": [
+                        "mkdir .cargo",
+                        "mv cargo/config .cargo/config.toml",
+                        "cat .cargo/config.toml"
+                    ]
                 }
             ]
         },
@@ -126,17 +163,23 @@
             "name": "fractal",
             "buildsystem": "meson",
             "config-opts": [
-                "-Dprofile=default",
-                "-Dsandboxed-build=true"
+                "-Dprofile=default"
             ],
             "sources": [
                 {
                     "type": "git",
                     "url": "https://gitlab.gnome.org/World/fractal.git",
-                    "tag": "9",
-                    "commit": "cb26488cc1b57acddd2d61221a791bc9f86848fc"
+                    "tag": "10",
+                    "commit": "c5955bbc745aabcc4fd8fdecd45c056aff1ac77f"
                 },
-                "cargo-sources.json"
+                "fractal-cargo-sources.json",
+                {
+                    "type": "shell",
+                    "commands": [
+                        "cat cargo/config >> .cargo/config.toml",
+                        "cat .cargo/config.toml"
+                    ]
+                }
             ]
         }
     ]
