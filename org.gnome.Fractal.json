@@ -21,11 +21,12 @@
         "append-path": "/usr/lib/sdk/llvm18/bin:/usr/lib/sdk/rust-stable/bin"
     },
     "add-extensions": {
-        "org.gnome.Fractal.HEIC": {
-            "directory": "lib/libheif-heic",
-            "add-ld-path": "lib",
-            "bundle": true,
-            "autodelete": true
+        "org.freedesktop.Platform.ffmpeg-ful": {
+            "version": "24.08",
+            "directory": "lib/ffmpg",
+            "add-ld-path": ".",
+            "no-autodownload": false,
+            "autodelete": false
         }
     },
     "cleanup": [
@@ -85,47 +86,6 @@
                     "url": "https://gitlab.gnome.org/GNOME/libshumate.git",
                     "tag": "1.3.0",
                     "commit": "e08d1442b80d0a352026505564e2cbe164b03997"
-                }
-            ]
-        },
-        {
-            "name": "libde265",
-            "buildsystem": "cmake-ninja",
-            "config-opts": [
-                "-DCMAKE_INSTALL_PREFIX=/app/lib/libheif-heic",
-                "-DENABLE_SDL=Off"
-            ],
-            "sources": [
-                {
-                    "type": "git",
-                    "url": "https://github.com/strukturag/libde265.git",
-                    "commit": "17bb8d9fcea62db8cdeb0fc7ef8d15dbd19a22e4",
-                    "tag": "v1.0.15"
-                }
-            ]
-        },
-        {
-            "name": "libheif",
-            "buildsystem": "cmake-ninja",
-            "config-opts": [
-                "-DWITH_LIBDE265_PLUGIN=On",
-                "-DPLUGIN_DIRECTORY=/app/lib/libheif-heic/lib",
-                "-DLIBDE265_INCLUDE_DIR=/app/lib/libheif-heic/include",
-                "-DLIBDE265_PKGCONF_LIBRARY_DIRS=/app/lib/libheif-heic/lib",
-                "-DWITH_X265=Off",
-                "-DWITH_SvtEnc=Off",
-                "-DWITH_SvtEnc_PLUGIN=Off",
-                "-DWITH_AOM_ENCODER=Off",
-                "-DWITH_RAV1E_PLUGIN=Off",
-                "-DWITH_RAV1E=Off",
-                "-DWITH_EXAMPLES=Off"
-            ],
-            "sources": [
-                {
-                    "type": "git",
-                    "url": "https://github.com/strukturag/libheif.git",
-                    "commit": "bf35e9eb25af8f2b7917996ad9ba849d922f8d15",
-                    "tag": "v1.18.2"
                 }
             ]
         },
