@@ -144,8 +144,8 @@
                 {
                     "type": "git",
                     "url": "https://gitlab.gnome.org/GNOME/glycin",
-                    "tag": "1.1.2",
-                    "commit": "ec00d78b3e4f48030011601fcf991d0749fa3dab",
+                    "tag": "1.2.0",
+                    "commit": "c886add2e54f916a8158e491ed973581a2c7b3d0",
                     "disable-submodules": true
                 },
                 "glycin-loaders-cargo-sources.json",
