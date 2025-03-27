@@ -1,7 +1,7 @@
 {
     "app-id": "org.gnome.Fractal",
     "runtime": "org.gnome.Platform",
-    "runtime-version": "47",
+    "runtime-version": "48",
     "sdk": "org.gnome.Sdk",
     "sdk-extensions": [
         "org.freedesktop.Sdk.Extension.rust-stable",
@@ -21,13 +21,17 @@
         "append-path": "/usr/lib/sdk/llvm18/bin:/usr/lib/sdk/rust-stable/bin"
     },
     "add-extensions": {
-        "org.gnome.Fractal.HEIC": {
-            "directory": "lib/libheif-heic",
-            "add-ld-path": "lib",
-            "bundle": true,
-            "autodelete": true
+        "org.freedesktop.Platform.ffmpeg-full": {
+            "version": "24.08",
+            "directory": "lib/ffmpeg",
+            "add-ld-path": ".",
+            "no-autodownload": false,
+            "autodelete": false
         }
     },
+    "cleanup-commands": [
+        "mkdir -p ${FLATPAK_DEST}/lib/ffmpeg"
+    ],
     "cleanup": [
         "bin/grass"
     ],
@@ -65,8 +69,8 @@
                 {
                     "type": "git",
                     "url": "https://github.com/protobuf-c/protobuf-c.git",
-                    "tag": "v1.5.0",
-                    "commit": "8c201f6e47a53feaab773922a743091eb6c8972a"
+                    "tag": "v1.5.1",
+                    "commit": "185beed28e65494be7505b30c1afeaf199e19b23"
                 }
             ]
         },
@@ -83,49 +87,8 @@
                 {
                     "type": "git",
                     "url": "https://gitlab.gnome.org/GNOME/libshumate.git",
-                    "tag": "1.3.0",
-                    "commit": "e08d1442b80d0a352026505564e2cbe164b03997"
-                }
-            ]
-        },
-        {
-            "name": "libde265",
-            "buildsystem": "cmake-ninja",
-            "config-opts": [
-                "-DCMAKE_INSTALL_PREFIX=/app/lib/libheif-heic",
-                "-DENABLE_SDL=Off"
-            ],
-            "sources": [
-                {
-                    "type": "git",
-                    "url": "https://github.com/strukturag/libde265.git",
-                    "commit": "17bb8d9fcea62db8cdeb0fc7ef8d15dbd19a22e4",
-                    "tag": "v1.0.15"
-                }
-            ]
-        },
-        {
-            "name": "libheif",
-            "buildsystem": "cmake-ninja",
-            "config-opts": [
-                "-DWITH_LIBDE265_PLUGIN=On",
-                "-DPLUGIN_DIRECTORY=/app/lib/libheif-heic/lib",
-                "-DLIBDE265_INCLUDE_DIR=/app/lib/libheif-heic/include",
-                "-DLIBDE265_PKGCONF_LIBRARY_DIRS=/app/lib/libheif-heic/lib",
-                "-DWITH_X265=Off",
-                "-DWITH_SvtEnc=Off",
-                "-DWITH_SvtEnc_PLUGIN=Off",
-                "-DWITH_AOM_ENCODER=Off",
-                "-DWITH_RAV1E_PLUGIN=Off",
-                "-DWITH_RAV1E=Off",
-                "-DWITH_EXAMPLES=Off"
-            ],
-            "sources": [
-                {
-                    "type": "git",
-                    "url": "https://github.com/strukturag/libheif.git",
-                    "commit": "bf35e9eb25af8f2b7917996ad9ba849d922f8d15",
-                    "tag": "v1.18.2"
+                    "tag": "1.4.0",
+                    "commit": "06021e35f0d479612fb1a3af91a73ba562175e03"
                 }
             ]
         },
@@ -144,8 +107,8 @@
                 {
                     "type": "git",
                     "url": "https://gitlab.gnome.org/GNOME/glycin",
-                    "tag": "1.1.2",
-                    "commit": "ec00d78b3e4f48030011601fcf991d0749fa3dab",
+                    "tag": "1.2.0",
+                    "commit": "c886add2e54f916a8158e491ed973581a2c7b3d0",
                     "disable-submodules": true
                 },
                 "glycin-loaders-cargo-sources.json",
@@ -169,8 +132,8 @@
                 {
                     "type": "git",
                     "url": "https://gitlab.gnome.org/World/fractal.git",
-                    "tag": "10.1",
-                    "commit": "0baf0affb712fa96faa45c0163fe09c96297d87d"
+                    "tag": "11.beta",
+                    "commit": "f513aa5f8b355e335b2acaa7ffffac66c5301e48"
                 },
                 "fractal-cargo-sources.json",
                 {
