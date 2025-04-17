@@ -69,8 +69,8 @@
                 {
                     "type": "git",
                     "url": "https://github.com/protobuf-c/protobuf-c.git",
-                    "tag": "v1.5.1",
-                    "commit": "185beed28e65494be7505b30c1afeaf199e19b23"
+                    "tag": "v1.5.2",
+                    "commit": "4719fdd7760624388c2c5b9d6759eb6a47490626"
                 }
             ]
         },
@@ -107,8 +107,8 @@
                 {
                     "type": "git",
                     "url": "https://gitlab.gnome.org/GNOME/glycin",
-                    "tag": "1.2.0",
-                    "commit": "c886add2e54f916a8158e491ed973581a2c7b3d0",
+                    "tag": "1.2.1",
+                    "commit": "7d10c2f3e59e1d4dbc2a33241eb54aa4d9f84b3f",
                     "disable-submodules": true
                 },
                 "glycin-loaders-cargo-sources.json",
@@ -132,8 +132,8 @@
                 {
                     "type": "git",
                     "url": "https://gitlab.gnome.org/World/fractal.git",
-                    "tag": "11.beta",
-                    "commit": "f513aa5f8b355e335b2acaa7ffffac66c5301e48"
+                    "tag": "11.rc",
+                    "commit": "c5325049f618f9bb792229f06dc85f3e47ca7610"
                 },
                 "fractal-cargo-sources.json",
                 {
