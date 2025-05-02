@@ -32,9 +32,6 @@
     "cleanup-commands": [
         "mkdir -p ${FLATPAK_DEST}/lib/ffmpeg"
     ],
-    "cleanup": [
-        "bin/grass"
-    ],
     "modules": [
         {
             "name": "grass",
@@ -49,6 +46,7 @@
                 "mkdir -p /app/bin",
                 "install -D ./target/release/grass /app/bin/"
             ],
+            "cleanup": ["*"],
             "sources": [
                 {
                     "type": "git",
@@ -132,8 +130,8 @@
                 {
                     "type": "git",
                     "url": "https://gitlab.gnome.org/World/fractal.git",
-                    "tag": "11.rc",
-                    "commit": "c5325049f618f9bb792229f06dc85f3e47ca7610"
+                    "tag": "11",
+                    "commit": "ebd7d029cf50aa168443610910f27c1831697446"
                 },
                 "fractal-cargo-sources.json",
                 {
