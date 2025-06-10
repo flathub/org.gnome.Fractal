@@ -3707,14 +3707,14 @@
     {
         "type": "archive",
         "archive-type": "tar-gzip",
-        "url": "https://static.crates.io/crates/matrix-sdk-crypto/matrix-sdk-crypto-0.11.0.crate",
-        "sha256": "fe2a8a811f9809f37c360f7005350e76661cb2bed2624b87b8d772c444bf572a",
-        "dest": "cargo/vendor/matrix-sdk-crypto-0.11.0"
+        "url": "https://static.crates.io/crates/matrix-sdk-crypto/matrix-sdk-crypto-0.11.1.crate",
+        "sha256": "b5af2cba80b6e9a3a3b2a66734cb400625b9666b3eb0cd7f7b13eede8d3e075a",
+        "dest": "cargo/vendor/matrix-sdk-crypto-0.11.1"
     },
     {
         "type": "inline",
-        "contents": "{\"package\": \"fe2a8a811f9809f37c360f7005350e76661cb2bed2624b87b8d772c444bf572a\", \"files\": {}}",
-        "dest": "cargo/vendor/matrix-sdk-crypto-0.11.0",
+        "contents": "{\"package\": \"b5af2cba80b6e9a3a3b2a66734cb400625b9666b3eb0cd7f7b13eede8d3e075a\", \"files\": {}}",
+        "dest": "cargo/vendor/matrix-sdk-crypto-0.11.1",
         "dest-filename": ".cargo-checksum.json"
     },
     {
