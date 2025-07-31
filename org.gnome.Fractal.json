@@ -105,8 +105,8 @@
                 {
                     "type": "git",
                     "url": "https://gitlab.gnome.org/GNOME/glycin",
-                    "tag": "1.2.1",
-                    "commit": "7d10c2f3e59e1d4dbc2a33241eb54aa4d9f84b3f",
+                    "tag": "1.2.2",
+                    "commit": "c7d362287303944721cf583d4d9e9f7721bfa407",
                     "disable-submodules": true
                 },
                 "glycin-loaders-cargo-sources.json",
@@ -130,8 +130,8 @@
                 {
                     "type": "git",
                     "url": "https://gitlab.gnome.org/World/fractal.git",
-                    "tag": "12.beta",
-                    "commit": "b31f4ff67b66786757b06d2e1293e8a1c663bdb6"
+                    "tag": "12.rc",
+                    "commit": "5fb9e981b70eef44d72b3e52c8e0561548037b1d"
                 },
                 "fractal-cargo-sources.json",
                 {
