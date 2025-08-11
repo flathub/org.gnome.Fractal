@@ -3928,14 +3928,14 @@
     {
         "type": "archive",
         "archive-type": "tar-gzip",
-        "url": "https://static.crates.io/crates/zune-jpeg/zune-jpeg-0.4.14.crate",
-        "sha256": "99a5bab8d7dedf81405c4bb1f2b83ea057643d9cb28778cea9eecddeedd2e028",
-        "dest": "cargo/vendor/zune-jpeg-0.4.14"
+        "url": "https://static.crates.io/crates/zune-jpeg/zune-jpeg-0.4.18.crate",
+        "sha256": "7384255a918371b5af158218d131530f694de9ad3815ebdd0453a940485cb0fa",
+        "dest": "cargo/vendor/zune-jpeg-0.4.18"
     },
     {
         "type": "inline",
-        "contents": "{\"package\": \"99a5bab8d7dedf81405c4bb1f2b83ea057643d9cb28778cea9eecddeedd2e028\", \"files\": {}}",
-        "dest": "cargo/vendor/zune-jpeg-0.4.14",
+        "contents": "{\"package\": \"7384255a918371b5af158218d131530f694de9ad3815ebdd0453a940485cb0fa\", \"files\": {}}",
+        "dest": "cargo/vendor/zune-jpeg-0.4.18",
         "dest-filename": ".cargo-checksum.json"
     },
     {
