@@ -130,8 +130,8 @@
                 {
                     "type": "git",
                     "url": "https://gitlab.gnome.org/World/fractal.git",
-                    "tag": "12",
-                    "commit": "ddc5001a79c17c133a83fbe8df994a960c127174"
+                    "tag": "12.1",
+                    "commit": "c79b56614c7f14f56bd541d404d5b2c09be767b5"
                 },
                 "fractal-cargo-sources.json",
                 {
