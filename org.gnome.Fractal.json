@@ -62,7 +62,6 @@
             "name": "libshumate",
             "buildsystem": "meson",
             "config-opts": [
-                "-Dgir=false",
                 "-Dvapi=false",
                 "-Dvector_renderer=true"
             ],
