@@ -7,7 +7,7 @@
 # The manifest file.
 MANIFEST="org.gnome.Fractal.json"
 # The names of the modules to update.
-MODULES=("grass" "glycin-loaders" "fractal")
+MODULES=("grass" "fractal")
 # The directory where the sources are located.
 SOURCES_DIR="ci_sources"
 # The repository of the Flatpak Builder Tools.
