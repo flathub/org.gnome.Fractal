@@ -1,7 +1,7 @@
 {
     "app-id": "org.gnome.Fractal",
     "runtime": "org.gnome.Platform",
-    "runtime-version": "49",
+    "runtime-version": "50",
     "sdk": "org.gnome.Sdk",
     "sdk-extensions": [
         "org.freedesktop.Sdk.Extension.rust-stable"
@@ -70,8 +70,8 @@
                 {
                     "type": "git",
                     "url": "https://gitlab.gnome.org/GNOME/libshumate.git",
-                    "tag": "1.5.0.1",
-                    "commit": "ed5fe31377c050610d5932903a5217e1c7d1d0e4"
+                    "tag": "1.6.0",
+                    "commit": "b4ca104a0bad8682ad51540867a1783f7db47473"
                 }
             ]
         },
@@ -85,8 +85,8 @@
                 {
                     "type": "git",
                     "url": "https://gitlab.gnome.org/World/fractal.git",
-                    "tag": "13",
-                    "commit": "4e44c82ce93bea01bdd074bd4ed0d0ebadeb8c90"
+                    "tag": "14",
+                    "commit": "c0939ed53deaf54f29c11c315df0944705888138"
                 },
                 "fractal-cargo-sources.json",
                 {
