@@ -1068,14 +1068,14 @@
     {
         "type": "archive",
         "archive-type": "tar-gzip",
-        "url": "https://static.crates.io/crates/ctutils/ctutils-0.4.3.crate",
-        "sha256": "03bb0e1cc970d482d121d9a1744999169b69a07470b3d644a7894e53fcaf4574",
-        "dest": "cargo/vendor/ctutils-0.4.3"
+        "url": "https://static.crates.io/crates/ctutils/ctutils-0.4.6.crate",
+        "sha256": "fe3e9d21d39e6f39ff46e03d5b621424f88ee23d8a1672c6bfc9ccc7f2da4f6a",
+        "dest": "cargo/vendor/ctutils-0.4.6"
     },
     {
         "type": "inline",
-        "contents": "{\"package\": \"03bb0e1cc970d482d121d9a1744999169b69a07470b3d644a7894e53fcaf4574\", \"files\": {}}",
-        "dest": "cargo/vendor/ctutils-0.4.3",
+        "contents": "{\"package\": \"fe3e9d21d39e6f39ff46e03d5b621424f88ee23d8a1672c6bfc9ccc7f2da4f6a\", \"files\": {}}",
+        "dest": "cargo/vendor/ctutils-0.4.6",
         "dest-filename": ".cargo-checksum.json"
     },
     {
@@ -4890,53 +4890,53 @@
     {
         "type": "archive",
         "archive-type": "tar-gzip",
-        "url": "https://static.crates.io/crates/ruma/ruma-0.17.1.crate",
-        "sha256": "1182bf4b2965b41743a57a290aabad8aa32b4129abe2ad70f38d2f0a29a8da59",
-        "dest": "cargo/vendor/ruma-0.17.1"
+        "url": "https://static.crates.io/crates/ruma/ruma-0.17.2.crate",
+        "sha256": "5883cf806b796aba27c7157a438a10df8904bb70511c2fac872c59a7823915f9",
+        "dest": "cargo/vendor/ruma-0.17.2"
     },
     {
         "type": "inline",
-        "contents": "{\"package\": \"1182bf4b2965b41743a57a290aabad8aa32b4129abe2ad70f38d2f0a29a8da59\", \"files\": {}}",
-        "dest": "cargo/vendor/ruma-0.17.1",
+        "contents": "{\"package\": \"5883cf806b796aba27c7157a438a10df8904bb70511c2fac872c59a7823915f9\", \"files\": {}}",
+        "dest": "cargo/vendor/ruma-0.17.2",
         "dest-filename": ".cargo-checksum.json"
     },
     {
         "type": "archive",
         "archive-type": "tar-gzip",
-        "url": "https://static.crates.io/crates/ruma-client-api/ruma-client-api-0.25.1.crate",
-        "sha256": "11c0874ba8e48c000c04cff3b502c91b07d63a1dab63d829c2929baaef351274",
-        "dest": "cargo/vendor/ruma-client-api-0.25.1"
+        "url": "https://static.crates.io/crates/ruma-client-api/ruma-client-api-0.25.2.crate",
+        "sha256": "506e521d721c5cbd2c590d50d46c60cd3d32e38c00fbb0173da9a27d9a532172",
+        "dest": "cargo/vendor/ruma-client-api-0.25.2"
     },
     {
         "type": "inline",
-        "contents": "{\"package\": \"11c0874ba8e48c000c04cff3b502c91b07d63a1dab63d829c2929baaef351274\", \"files\": {}}",
-        "dest": "cargo/vendor/ruma-client-api-0.25.1",
+        "contents": "{\"package\": \"506e521d721c5cbd2c590d50d46c60cd3d32e38c00fbb0173da9a27d9a532172\", \"files\": {}}",
+        "dest": "cargo/vendor/ruma-client-api-0.25.2",
         "dest-filename": ".cargo-checksum.json"
     },
     {
         "type": "archive",
         "archive-type": "tar-gzip",
-        "url": "https://static.crates.io/crates/ruma-common/ruma-common-0.20.1.crate",
-        "sha256": "b4df1d49734cdb1ec2342ef0d8d6b58f7480bf9677d73a41ea42607e3194071e",
-        "dest": "cargo/vendor/ruma-common-0.20.1"
+        "url": "https://static.crates.io/crates/ruma-common/ruma-common-0.20.2.crate",
+        "sha256": "5b496f80bc1cca375294fba5170bfb5d00f0de0ed655675dc72fa782643f54ea",
+        "dest": "cargo/vendor/ruma-common-0.20.2"
     },
     {
         "type": "inline",
-        "contents": "{\"package\": \"b4df1d49734cdb1ec2342ef0d8d6b58f7480bf9677d73a41ea42607e3194071e\", \"files\": {}}",
-        "dest": "cargo/vendor/ruma-common-0.20.1",
+        "contents": "{\"package\": \"5b496f80bc1cca375294fba5170bfb5d00f0de0ed655675dc72fa782643f54ea\", \"files\": {}}",
+        "dest": "cargo/vendor/ruma-common-0.20.2",
         "dest-filename": ".cargo-checksum.json"
     },
     {
         "type": "archive",
         "archive-type": "tar-gzip",
-        "url": "https://static.crates.io/crates/ruma-events/ruma-events-0.35.1.crate",
-        "sha256": "ed7e06e759106f7657d4809f3ed25782e0d2a20ee05f0b90530d6e0428ca3792",
-        "dest": "cargo/vendor/ruma-events-0.35.1"
+        "url": "https://static.crates.io/crates/ruma-events/ruma-events-0.35.2.crate",
+        "sha256": "28eb4aebc89f505550aad7dacaf86276d8041992836ff53e4cebfcb0165beec5",
+        "dest": "cargo/vendor/ruma-events-0.35.2"
     },
     {
         "type": "inline",
-        "contents": "{\"package\": \"ed7e06e759106f7657d4809f3ed25782e0d2a20ee05f0b90530d6e0428ca3792\", \"files\": {}}",
-        "dest": "cargo/vendor/ruma-events-0.35.1",
+        "contents": "{\"package\": \"28eb4aebc89f505550aad7dacaf86276d8041992836ff53e4cebfcb0165beec5\", \"files\": {}}",
+        "dest": "cargo/vendor/ruma-events-0.35.2",
         "dest-filename": ".cargo-checksum.json"
     },
     {
@@ -4968,27 +4968,27 @@
     {
         "type": "archive",
         "archive-type": "tar-gzip",
-        "url": "https://static.crates.io/crates/ruma-identifiers-validation/ruma-identifiers-validation-0.13.0.crate",
-        "sha256": "7d9dde0990b890e6e9ae3bd5c4133a283e6bf7f7cd9d50f1751703e832a8f226",
-        "dest": "cargo/vendor/ruma-identifiers-validation-0.13.0"
+        "url": "https://static.crates.io/crates/ruma-identifiers-validation/ruma-identifiers-validation-0.14.0.crate",
+        "sha256": "e45211431fb8cc8fe7bfaea7b5535da758ba3f692543faa6df9255bbd5e3170c",
+        "dest": "cargo/vendor/ruma-identifiers-validation-0.14.0"
     },
     {
         "type": "inline",
-        "contents": "{\"package\": \"7d9dde0990b890e6e9ae3bd5c4133a283e6bf7f7cd9d50f1751703e832a8f226\", \"files\": {}}",
-        "dest": "cargo/vendor/ruma-identifiers-validation-0.13.0",
+        "contents": "{\"package\": \"e45211431fb8cc8fe7bfaea7b5535da758ba3f692543faa6df9255bbd5e3170c\", \"files\": {}}",
+        "dest": "cargo/vendor/ruma-identifiers-validation-0.14.0",
         "dest-filename": ".cargo-checksum.json"
     },
     {
         "type": "archive",
         "archive-type": "tar-gzip",
-        "url": "https://static.crates.io/crates/ruma-macros/ruma-macros-0.20.1.crate",
-        "sha256": "83a8733ab734a248187aadd02ced5d338a99808b025a37889c1f86ada6cf3001",
-        "dest": "cargo/vendor/ruma-macros-0.20.1"
+        "url": "https://static.crates.io/crates/ruma-macros/ruma-macros-0.20.2.crate",
+        "sha256": "f0f3214335d3957e7e677d0425949ec6900b74d5b7b5b3736a8a7a9ab0fd11ef",
+        "dest": "cargo/vendor/ruma-macros-0.20.2"
     },
     {
         "type": "inline",
-        "contents": "{\"package\": \"83a8733ab734a248187aadd02ced5d338a99808b025a37889c1f86ada6cf3001\", \"files\": {}}",
-        "dest": "cargo/vendor/ruma-macros-0.20.1",
+        "contents": "{\"package\": \"f0f3214335d3957e7e677d0425949ec6900b74d5b7b5b3736a8a7a9ab0fd11ef\", \"files\": {}}",
+        "dest": "cargo/vendor/ruma-macros-0.20.2",
         "dest-filename": ".cargo-checksum.json"
     },
     {
@@ -7346,7 +7346,7 @@
     },
     {
         "type": "inline",
-        "contents": "[source]\n[source.vendored-sources]\ndirectory = \"cargo/vendor\"\n\n[source.crates-io]\nreplace-with = \"vendored-sources\"\n",
+        "contents": "[source.vendored-sources]\ndirectory = \"cargo/vendor\"\n\n[source.crates-io]\nreplace-with = \"vendored-sources\"\n",
         "dest": "cargo",
         "dest-filename": "config"
     }
